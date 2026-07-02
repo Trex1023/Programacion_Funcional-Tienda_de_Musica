@@ -7,6 +7,6 @@ const catalogo = [
 ];
 
 const sumaPrecios = (catalogo) => {
-    return catalogo.reduce((total, album) => total + album.precio, 0);
+    return catalogo.reduce((total, album) => total + album.precio, 0) / catalogo.length;
 };
 console.log(sumaPrecios(catalogo));
