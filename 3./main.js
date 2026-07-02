@@ -5,8 +5,3 @@ const catalogo = [
 { id: 4, titulo: 'Rumours', artista: 'Fleetwood Mac', genero: 'Rock', anio: 1980, precio: 980, disponible: true, canciones: ['Go Your Own Way', 'Dreams', 'The Chain'] },
 { id: 5, titulo: 'The Miseducation', artista: 'Lauryn Hill', genero: 'RnB', anio: 1998, precio: 1100, disponible: true, canciones: ['Ex-Factor', 'Doo Wop', 'Everything is Everything'] }
 ];
-
-const extraerTitulos = (catalogo) => {
-    return catalogo.map(album => album.titulo)
-};
-console.log(extraerTitulos(catalogo));
