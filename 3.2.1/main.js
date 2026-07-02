@@ -6,6 +6,9 @@ const catalogo = [
 { id: 5, titulo: 'The Miseducation', artista: 'Lauryn Hill', genero: 'RnB', anio: 1998, precio: 1100, disponible: true, canciones: ['Ex-Factor', 'Doo Wop', 'Everything is Everything'] }
 ];
 
-let gen = prompt("¿Que genero le interesa?").toLowerCase()
-const repuesta = catalogo.filter(catalogo => catalogo.genero.toLowerCase() == gen)
-console.log(repuesta)
+const aplicarDescuento = (catalogo, descuento) => {
+    return catalogo.map(album =>({...album, precio: Math.round(album.precio * (1 - descuento / 100))}))    
+};
+const catalogoDesc = aplicarDescuento(catalogo, 10);
+console.log(catalogoDesc[0].precio);
+console.log(catalogo[0].precio);

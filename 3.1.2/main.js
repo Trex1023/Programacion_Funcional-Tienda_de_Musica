@@ -6,5 +6,7 @@ const catalogo = [
 { id: 5, titulo: 'The Miseducation', artista: 'Lauryn Hill', genero: 'RnB', anio: 1998, precio: 1100, disponible: true, canciones: ['Ex-Factor', 'Doo Wop', 'Everything is Everything'] }
 ];
 
-const repuesta = catalogo.filter(catalogo => catalogo.disponible == true)
-console.log(repuesta)
+const soloDisponibles = (catalogo) => {
+return catalogo.filter(catalogo => catalogo.disponible == true)
+};
+console.log(soloDisponibles(catalogo));

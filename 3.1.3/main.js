@@ -6,7 +6,7 @@ const catalogo = [
 { id: 5, titulo: 'The Miseducation', artista: 'Lauryn Hill', genero: 'RnB', anio: 1998, precio: 1100, disponible: true, canciones: ['Ex-Factor', 'Doo Wop', 'Everything is Everything'] }
 ];
 
-let min = Number(prompt("¿Cual es el precio minimo?"))
-let max = Number(prompt("¿Cual es el precio maximo?"))
-const repuesta = catalogo.filter(catalogo => catalogo.precio <= max && catalogo.precio >= min)
-console.log(repuesta)
+const filtrarPorPrecio = (catalogo, min, max) => {
+    return catalogo.filter(catalogo => catalogo.precio <= max && catalogo.precio >= min)
+};
+console.log(filtrarPorPrecio(catalogo, 1000, 1400));
